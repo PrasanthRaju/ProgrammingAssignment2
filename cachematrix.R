@@ -36,8 +36,9 @@ cacheSolve <- function(x, ...) {
 		
 		## Get the inverse matrix
 		invMatrix <- x$getInverseMatrix()
+		matricks <- x$getMatrix()
 		
-		## If inverse matrix is already cached, then return cached version of the inverse matrix
+		## If inverse matrix is already cached AND matrix has not changed, then return cached version of the inverse matrix
 		if(!is.null(invMatrix))
 		{
 			message("Getting cached data")
